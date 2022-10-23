@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './pages/board/board.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { BoardContainerComponent } from './pages/board-container/board-container.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BoardContainerComponent } from './pages/board-container/board-container
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
