@@ -5,3 +5,12 @@
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
+
+html, body {
+  height: 100%;
+}
+
+html {
+  background: rgba($color: pink, $alpha: 0.5);
+  overflow-y: auto !important;
+}
