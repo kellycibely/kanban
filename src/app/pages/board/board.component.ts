@@ -18,7 +18,7 @@ export class BoardComponent implements OnInit {
       new Task('Task Idea 2', 'Essa é a task número 2', TaskStatus.IDEA),
       new Task('Task Idea 3', 'Essa é a task número 3', TaskStatus.IDEA),
       new Task('Task Idea 4', 'Essa é a task número 4', TaskStatus.IDEA),
-      new Task('Task Idea 5', 'Essa é a task número 5', TaskStatus.IDEA),
+      new Task('Task Idea 5', 'Essa é a task de número 5', TaskStatus.IDEA),
     ]),
     new Column('todo', [
       new Task('Task todo 1', 'Essa é a task número 1', TaskStatus.TODO),
