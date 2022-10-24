@@ -85,7 +85,7 @@ export class BoardComponent implements OnInit {
   moveTask(task: any, nextListName: string) {
     const nextColumn = this.board.columns.find(cl => cl.name === nextListName);
     const previousColumn = this.board.columns.find(cl => cl.name === task?.status);
-    if (nextColumn && previousColumn) {
+    if ((nextColumn && previousColumn) && nextColumn.name !== previousColumn.name) {
       nextColumn.tasks.push(task);
       previousColumn.tasks = previousColumn.tasks.filter(ts => ts !== task);
 
