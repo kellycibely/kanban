@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-select',
@@ -11,6 +12,8 @@ export class SelectComponent implements OnInit {
   @Input() selected: string | undefined = '';
   @Output() selectedValue = new EventEmitter<string>();
   openOptions: boolean = false;
+
+  icon = faChevronDown;
   constructor() { }
 
   ngOnInit(): void {

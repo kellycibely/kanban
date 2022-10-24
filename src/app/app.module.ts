@@ -9,6 +9,7 @@ import { BoardContainerComponent } from './pages/board-container/board-container
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { SelectComponent } from './shared/components/select/select.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { SelectComponent } from './shared/components/select/select.component';
     NavbarComponent,
     BoardContainerComponent,
     ModalComponent,
-    SelectComponent
+    SelectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DragDropModule,
+    FontAwesomeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

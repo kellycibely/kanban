@@ -1,17 +1,17 @@
 <div class="container">
-  <div class="header" (click)="open()">
+  <div class="header" [class.header-active]="openOptions" (click)="open()">
     <input
     type="text"
     [value]='getValue()'
     readonly=true
     />
-    <span>v</span>
+    <fa-icon [icon]="icon"></fa-icon>
   </div>
-  <div class="options" *ngIf="openOptions">
-    <div *ngFor="let opt of list">
-      <div [class.selected]="opt === selected"
-           class="option"
-           (click)="selectOption(opt)">{{opt}}</div>
-    </div>
+  <div class="box" *ngIf="openOptions">
+    <div class="container active">
+      <div *ngFor="let opt of list" [class.selected]="opt === selected"
+             class="option"
+             (click)="selectOption(opt)">{{opt}}</div>
+      </div>
   </div>
 </div>
