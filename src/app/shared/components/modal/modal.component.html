@@ -1,0 +1,9 @@
+<div
+  class="wrapper"
+  (click)="wrapperClick($event)"
+  (window:keydown.esc)="clickWrapper.emit()"
+>
+  <div class="modal-container">
+    <ng-content></ng-content>
+  </div>
+</div>

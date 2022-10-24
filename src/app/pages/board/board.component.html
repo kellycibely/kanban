@@ -22,8 +22,13 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 </div>
+
+<app-modal *ngIf="openModal" (clickWrapper)="openModal = false">
+  <div class="modal-container">
+    oi
+  </div>
+</app-modal>
