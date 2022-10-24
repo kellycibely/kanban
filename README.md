@@ -4,7 +4,7 @@ Projeto de galeria de fotos dinâmicas com Grid Css
 
 Utiliza [Angular CLI](https://github.com/angular/angular-cli) versão 14.0.0.
 
-<img src="/src/assets/img/application.png" alt="gallery"/>
+<img src="/src/assets/img/board.png" alt="gallery"/>
 
 ## Principais tecnologias
 
