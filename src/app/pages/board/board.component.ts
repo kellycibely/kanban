@@ -36,7 +36,9 @@ export class BoardComponent implements OnInit {
     
   ])
   public openModal = false;
-  public currentTask: Task| null = null;
+  public currentTask: any;
+  public status = Object.values(TaskStatus);
+
   constructor() { }
 
   ngOnInit(): void {
@@ -55,7 +57,7 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  open(item: any) {
+  open(item: Task) {
     console.log(item);
     this.currentTask = item;
     this.openModal= !this.openModal;

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="header" (click)="open()">
+    <input
+    type="text"
+    [value]='getValue()'
+    readonly=true
+    />
+    <span>v</span>
+  </div>
+  <div class="options" *ngIf="openOptions">
+    <div *ngFor="let opt of list">
+      <div [class.selected]="opt === selected"
+           class="option"
+           (click)="selectOption(opt)">{{opt}}</div>
+    </div>
+  </div>
+</div>

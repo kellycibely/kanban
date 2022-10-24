@@ -27,8 +27,27 @@
   </section>
 </div>
 
-<app-modal *ngIf="openModal" (clickWrapper)="openModal = false">
+<app-modal class="modal" *ngIf="openModal" (clickWrapper)="openModal = false">
   <div class="modal-container">
-    oi
+    <div class="modal-header">
+      <h1 class="modal-title" contenteditable="true">{{currentTask.title}}</h1>
+      <div class="modal-tags">
+        <span class="status">{{currentTask.status}}</span>
+      </div>
+
+    </div>
+    <div class="modal-content">
+      <strong><h3>Descrição:</h3></strong> 
+      <span contenteditable="true">
+        {{currentTask.description}}
+      </span>
+
+      <span><strong>Status</strong></span>
+    
+      <app-select 
+        [list]="status"
+        [selected]="currentTask.status"
+       ></app-select>
+    </div>
   </div>
 </app-modal>

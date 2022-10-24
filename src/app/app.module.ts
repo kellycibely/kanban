@@ -8,6 +8,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { BoardContainerComponent } from './pages/board-container/board-container.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { ModalComponent } from './shared/components/modal/modal.component';
+import { SelectComponent } from './shared/components/select/select.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ModalComponent } from './shared/components/modal/modal.component';
     BoardComponent,
     NavbarComponent,
     BoardContainerComponent,
-    ModalComponent
+    ModalComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,

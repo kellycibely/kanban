@@ -1,0 +1,46 @@
+input {
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 100% !important;
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding:  4px 12px;
+    padding:  4px 12px;
+    outline: 2px solid rgba($color: rgb(86, 86, 238), $alpha: 1.0);
+    border-radius: 4px;
+  }
+
+  .options {
+    outline: 2px solid rgba($color: black, $alpha: 0.2);
+    border-radius: 0 0 8px 8px;
+    max-height: 100px;
+    overflow-y: auto;
+
+    .option {
+      display: flex;
+      justify-content: start;
+      font-size: 16px;
+      text-transform: capitalize;
+      padding: 8px;
+      color: #000;
+    }
+
+    .option:hover {
+      font-weight: 600;
+      color: #fff;
+      background-color: rgba($color: #1e7acb, $alpha: 0.8);
+    }
+  }
+}
