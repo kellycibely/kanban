@@ -110,6 +110,23 @@
 
       color: #fff;
       font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    .idea {
+      background-color: rgb(30, 122, 203);
+    }
+
+    .research {
+      background-color: rgb(184, 179, 43);
+    }
+
+    .todo {
+      background-color: rgb(17, 147, 114);
+    }
+
+    .done {
+      background-color: green;
     }
 
     .content-accountable {

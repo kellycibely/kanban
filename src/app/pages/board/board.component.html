@@ -16,7 +16,7 @@
             <div class="task" (click)="open(task)" *ngFor="let task of column.tasks" cdkDrag>
               <div class="task-title">{{task.title}}</div>
               <div class="task-content">
-                <div class="content-status">{{task.status}}</div>
+                <div class="content-status" ngClass="{{task.status}}">{{task.status}}</div>
                 <div class="content-accountable">K</div>
               </div>
             </div>
