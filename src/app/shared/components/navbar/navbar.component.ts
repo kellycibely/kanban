@@ -16,4 +16,12 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goGithub() {
+    window.open('https://www.linkedin.com/in/kelly-lopes-168686149/', '_black');
+  }
+
+  goLinkedin() {
+    window.open('https://www.linkedin.com/in/kelly-lopes-168686149/', '_black');
+  }
+
 }
