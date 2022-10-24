@@ -8,9 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SelectComponent implements OnInit {
 
   @Input() list: any[] = [];
-  @Input() selected: string = '';
+  @Input() selected: string | undefined = '';
   @Output() selectedValue = new EventEmitter<string>();
-  options = ['TESTE', 'TESTE 2', 'TESTE 3']
   openOptions: boolean = false;
   constructor() { }
 

@@ -14,7 +14,7 @@
           cdkDropList
           [cdkDropListData]="column.tasks"
           (cdkDropListDropped)="drop($event)">
-            <div class="task" (click)="open(task)" *ngFor="let task of column.tasks" cdkDrag>
+            <div class="task" (click)="open(task, i)" *ngFor="let task of column.tasks; let i=index" cdkDrag>
               <div class="task-title">{{task.title}}</div>
               <div class="task-content">
                 <div class="content-status" ngClass="{{task.status}}">{{task.status}}</div>
@@ -31,23 +31,24 @@
 <app-modal class="modal" *ngIf="openModal" (clickWrapper)="openModal = false">
   <div class="modal-container">
     <div class="modal-header">
-      <h1 class="modal-title" contenteditable="true">{{currentTask.title}}</h1>
+      <h1 class="modal-title" contenteditable="true" #title (input)="onTitleChange(title.innerText)">{{currentTask?.title}}</h1>
       <div class="modal-tags">
-        <span class="status">{{currentTask.status}}</span>
+        <span class="status">{{currentTask?.status}}</span>
       </div>
 
     </div>
     <div class="modal-content">
       <strong><h3>Descrição:</h3></strong> 
-      <span contenteditable="true">
-        {{currentTask.description}}
+      <span contenteditable="true" #description (input)="onDescriptionChange(description.innerText)">
+        {{currentTask?.description}}
       </span>
 
       <span><strong>Status</strong></span>
     
       <app-select 
         [list]="status"
-        [selected]="currentTask.status"
+        [selected]="currentTask?.status ? currentTask?.status : 'Status' "
+        (selectedValue)="moveTask(currentTask, $event)"
        ></app-select>
     </div>
   </div>
