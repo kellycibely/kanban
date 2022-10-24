@@ -55,10 +55,8 @@ export class BoardComponent implements OnInit {
   }
 
   drop(event: CdkDragDrop<Task[]>) {
-    // console.log('previousIndex: ' + event.previousIndex);
-    // console.log('currentIndex: ' + event.currentIndex);
-    // console.log(event.item.dropContainer.data);
-    console.log(event.previousContainer.id);
+    console.log('Saiu do: ' + event.previousContainer.id + ' index: ' + event.previousIndex);
+    console.log('Para: ' + event.container.id + ' index: ' +  event.currentIndex);
 
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -70,6 +68,9 @@ export class BoardComponent implements OnInit {
         event.currentIndex,
       );
     }
+
+    console.log("Array que recebeu o item");
+    console.log(event.container.data)
   }
 
   open(item: Task) {
