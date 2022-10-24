@@ -114,15 +114,15 @@
     }
 
     .idea {
+      background-color: rgb(92, 95, 92);
+    }
+
+    .in-progress {
       background-color: rgb(30, 122, 203);
     }
 
-    .research {
-      background-color: rgb(184, 179, 43);
-    }
-
     .todo {
-      background-color: rgb(17, 147, 114);
+      background-color: rgb(207, 202, 60);
     }
 
     .done {
@@ -145,6 +145,22 @@
       text-transform: uppercase;
     }
   }
+}
+
+.idea {
+  background-color: rgb(92, 95, 92);
+}
+
+.todo {
+  background-color: rgb(207, 202, 60);
+}
+
+.done {
+  background-color: green;
+}
+
+.in-progress {
+  background-color: rgb(30, 122, 203);
 }
 
 .cdk-drag-preview {
@@ -188,14 +204,13 @@
       margin-top: 24px;
       .status {
         display: flex;
-      justify-content: center;
-      align-items: center;
+        justify-content: center;
+        align-items: center;
 
-      padding: 4px 8px;
+        padding: 4px 8px;
 
-      background-color: rgb(75, 157, 75);
-      border-radius: 8px;
-      height: max-content;
+        border-radius: 8px;
+        height: max-content;
 
       color: #fff;
       font-weight: 700;

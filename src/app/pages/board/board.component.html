@@ -17,7 +17,7 @@
             <div class="task" (click)="open(task, i)" *ngFor="let task of column.tasks; let i=index" cdkDrag>
               <div class="task-title">{{task.title}}</div>
               <div class="task-content">
-                <div class="content-status" ngClass="{{task.status}}">{{task.status}}</div>
+                <div class="content-status" ngClass="{{getClassName(task.status)}}">{{task.status}}</div>
                 <div class="content-accountable">K</div>
               </div>
             </div>
@@ -33,7 +33,7 @@
     <div class="modal-header">
       <h1 class="modal-title" contenteditable="true" #title (input)="onTitleChange(title.innerText)">{{currentTask?.title}}</h1>
       <div class="modal-tags">
-        <span class="status">{{currentTask?.status}}</span>
+        <span class="status" ngClass="{{getClassName(currentTask.status)}}">{{currentTask?.status}}</span>
       </div>
 
     </div>

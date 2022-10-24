@@ -16,22 +16,19 @@ export class BoardComponent implements OnInit {
     new Column('idea', [
       new Task('Task Idea 1', 'Essa é a task 1', TaskStatus.IDEA),
       new Task('Task Idea 2', 'Essa é a task 2', TaskStatus.IDEA),
-      new Task('Task Idea 3', 'Essa é a task 3', TaskStatus.IDEA)
-    ]),
-    new Column('research', [
-      new Task('Task Research 1', 'Essa é a task 1', TaskStatus.RESEARCH),
-      new Task('Task Research 2', 'Essa é a task 2', TaskStatus.RESEARCH),
-      new Task('Task Research 3', 'Essa é a task 3', TaskStatus.RESEARCH)
+      new Task('Task Idea 3', 'Essa é a task 3', TaskStatus.IDEA),
+      new Task('Task Idea 2', 'Essa é a task 2', TaskStatus.IDEA),
+      new Task('Task Idea 3', 'Essa é a task 3', TaskStatus.IDEA),
     ]),
     new Column('todo', [
-      new Task('Task todo 1', 'Essa é a task 1', TaskStatus.TODO),
-      new Task('Task todo 2', 'Essa é a task 2', TaskStatus.TODO),
-      new Task('Task todo 3', 'Essa é a task 3', TaskStatus.TODO)
+      new Task('Task Research 1', 'Essa é a task 1', TaskStatus.TODO),
+      new Task('Task Research 2', 'Essa é a task 2', TaskStatus.TODO),
+    ]),
+    new Column('in progress', [
+      new Task('Task todo 1', 'Essa é a task 1', TaskStatus.IN_PROGRESS),
     ]),
     new Column('done', [
       new Task('Task 1 done', 'Essa é a task 1', TaskStatus.DONE),
-      new Task('Task 2 done', 'Essa é a task 2', TaskStatus.DONE),
-      new Task('Task 3 done', 'Essa é a task 3', TaskStatus.DONE)
     ]),
     
   ])
@@ -109,6 +106,10 @@ export class BoardComponent implements OnInit {
       const indexColumn = this.board.columns.indexOf(column);
       this.board.columns[indexColumn].tasks[this.currentTaskIndex] = this.currentTask;
      }
+  }
+
+  getClassName(status: string) {
+    return status.replace(" " , "-");
   }
 }
 
