@@ -21,11 +21,11 @@ export class BoardComponent implements OnInit {
       new Task('Task Idea 5', 'Essa é a task número 5', TaskStatus.IDEA),
     ]),
     new Column('todo', [
-      new Task('Task Research 1', 'Essa é a task número 1', TaskStatus.TODO),
-      new Task('Task Research 2', 'Essa é a task número 2', TaskStatus.TODO),
+      new Task('Task todo 1', 'Essa é a task número 1', TaskStatus.TODO),
+      new Task('Task todo 2', 'Essa é a task número 2', TaskStatus.TODO),
     ]),
     new Column('in progress', [
-      new Task('Task todo 1', 'Essa é a task número 1', TaskStatus.IN_PROGRESS),
+      new Task('Task in progress 1', 'Essa é a task número 1', TaskStatus.IN_PROGRESS),
     ]),
     new Column('done', [
       new Task('Task 1 done', 'Essa é a task número 1', TaskStatus.DONE),
