@@ -14,21 +14,21 @@ export class BoardComponent implements OnInit {
 
   board: Board = new Board('Sprint #1', [
     new Column('idea', [
-      new Task('Task Idea 1', 'Essa é a task 1', TaskStatus.IDEA),
-      new Task('Task Idea 2', 'Essa é a task 2', TaskStatus.IDEA),
-      new Task('Task Idea 3', 'Essa é a task 3', TaskStatus.IDEA),
-      new Task('Task Idea 2', 'Essa é a task 2', TaskStatus.IDEA),
-      new Task('Task Idea 3', 'Essa é a task 3', TaskStatus.IDEA),
+      new Task('Task Idea 1', 'Essa é a task número 1', TaskStatus.IDEA),
+      new Task('Task Idea 2', 'Essa é a task número 2', TaskStatus.IDEA),
+      new Task('Task Idea 3', 'Essa é a task número 3', TaskStatus.IDEA),
+      new Task('Task Idea 4', 'Essa é a task número 4', TaskStatus.IDEA),
+      new Task('Task Idea 5', 'Essa é a task número 5', TaskStatus.IDEA),
     ]),
     new Column('todo', [
-      new Task('Task Research 1', 'Essa é a task 1', TaskStatus.TODO),
-      new Task('Task Research 2', 'Essa é a task 2', TaskStatus.TODO),
+      new Task('Task Research 1', 'Essa é a task número 1', TaskStatus.TODO),
+      new Task('Task Research 2', 'Essa é a task número 2', TaskStatus.TODO),
     ]),
     new Column('in progress', [
-      new Task('Task todo 1', 'Essa é a task 1', TaskStatus.IN_PROGRESS),
+      new Task('Task todo 1', 'Essa é a task número 1', TaskStatus.IN_PROGRESS),
     ]),
     new Column('done', [
-      new Task('Task 1 done', 'Essa é a task 1', TaskStatus.DONE),
+      new Task('Task 1 done', 'Essa é a task número 1', TaskStatus.DONE),
     ]),
     
   ])
