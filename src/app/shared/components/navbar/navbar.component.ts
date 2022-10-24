@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   }
 
   goGithub() {
-    window.open('https://www.linkedin.com/in/kelly-lopes-168686149/', '_black');
+    window.open('https://github.com/kellycibely/kanban', '_black');
   }
 
   goLinkedin() {
