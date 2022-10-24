@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, IterableDiffer, IterableDiffers, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { Board } from 'src/app/shared/models/board.model';
 import { Column } from 'src/app/shared/models/column.model';
@@ -38,13 +38,28 @@ export class BoardComponent implements OnInit {
   public openModal = false;
   public currentTask: any;
   public status = Object.values(TaskStatus);
+  iterableDiffer: any;
 
-  constructor() { }
+  constructor(private iterableDiffers: IterableDiffers) { 
+    this.iterableDiffer = iterableDiffers.find([]).create(undefined);
+  }
 
   ngOnInit(): void {
   }
 
+  ngDoCheck(): void {
+    const changes = this.iterableDiffer.diff(this.board.columns);
+    if (changes) {
+      console.log('alterado');
+    }
+  }
+
   drop(event: CdkDragDrop<Task[]>) {
+    // console.log('previousIndex: ' + event.previousIndex);
+    // console.log('currentIndex: ' + event.currentIndex);
+    // console.log(event.item.dropContainer.data);
+    console.log(event.previousContainer.id);
+
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
