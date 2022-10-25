@@ -37,5 +37,5 @@ Utiliza [Angular CLI](https://github.com/angular/angular-cli) versão 14.0.0.
 
 após execute `ng serve` para rodar o servidor de desenvolvimento. Navegue para `http://localhost:4200/` para ver o grid de fotos.
 
-**DEMO**: 
+**DEMO**: https://kanban-zeta.vercel.app/
 
